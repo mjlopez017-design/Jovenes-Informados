@@ -1,0 +1,604 @@
+/* Fuente base */
+body {
+  margin: 0;
+  font-family: "Fredoka", sans-serif;
+  background-color: #0e0e12;
+  color: #f0f0f0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+.header {
+  background: rgba(20, 20, 25, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  color: #66ccff;
+  text-shadow: 0 0 10px #66ccff;
+}
+
+/* NAV */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 45px; /* Añade espacio a la derecha del menú */
+}
+
+.nav ul li:last-child {
+  /* No es estrictamente necesario, pero puedes usarlo para un ajuste fino */
+  margin-right: 0;
+}
+
+.nav-button {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #66ccff;
+  transition: width 0.3s;
+}
+
+.nav-button:hover::after,
+.nav-button.active::after {
+  width: 100%;
+}
+
+.nav-button:hover,
+.nav-button.active {
+  color: #66ccff;
+}
+
+/* MENU TOGGLE */
+.menu-toggle {
+    display: none; /* Oculto por defecto en escritorio */
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #66ccff;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(40%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  color: #66ccff;
+  text-shadow: 0 0 15px #66ccff;
+  animation: glow 2s infinite alternate;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin: 15px 0 25px;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #66ccff;
+  }
+  to {
+    text-shadow: 0 0 20px #0099ff, 0 0 30px #66ccff;
+  }
+}
+
+.btn {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #fff;
+  padding: 12px 25px;
+  margin: 8px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00c6ff;
+}
+
+/* QUIÉNES SOMOS */
+.quienes-somos {
+  padding: 80px 10%;
+  background: #141418;
+  text-align: center;
+}
+
+.quienes-somos h2 {
+  color: #66ccff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.quienes-somos p {
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* MITOS Y REALIDADES SECTION */
+.mitos {
+    padding: 80px 10%;
+    background: #0e0e12;
+    text-align: center;
+}
+
+.mitos h2 {
+    font-size: 2rem;
+    color: #66ccff;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #999;
+    margin-bottom: 40px;
+}
+
+.mitos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.mito-card {
+    background-color: #1a1a21;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(102, 204, 255, 0.1);
+}
+
+.mito-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 15px #66ccff;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-header i {
+    font-size: 1.5em;
+    color: #ffcc00;
+    margin-right: 10px;
+}
+
+.card-header h3 {
+    color: #fff;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.mito-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #66ccff;
+}
+
+.realidad {
+    background-color: #0b0b0f;
+    border-left: 4px solid #00c6ff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.realidad-tag {
+    font-weight: 700;
+    color: #00c6ff;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.realidad-tag i {
+    margin-right: 8px;
+    color: #39ff14;
+}
+
+/* RECOMENDACIONES SECTION */
+.recomendaciones {
+    padding: 80px 10%;
+    background-color: #141418;
+    text-align: center;
+}
+
+.recomendaciones h2 {
+    font-size: 2rem;
+    color: #66ccff;
+    margin-bottom: 30px;
+}
+
+.recomendaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.rec-item {
+    background-color: #0e0e12;
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid #0072ff;
+    box-shadow: 0 0 15px rgba(0, 114, 255, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.rec-item:hover {
+    background-color: #1a1a21;
+    transform: translateY(-3px);
+}
+
+.rec-item i {
+    font-size: 2.8em;
+    color: #39ff14;
+    margin-bottom: 15px;
+}
+
+.rec-item h3 {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.rec-item p {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+
+/* GALERÍA DE TIENDAS Y ADVERTENCIA */
+.centros-ayuda-container {
+    padding: 60px 10%;
+    background-color: #141418;
+    text-align: center;
+}
+
+.tiendas-promos-container h3 {
+    color: #66ccff;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px; 
+}
+
+.column {
+    flex: 1;
+    max-width: 300px;
+}
+
+.column img {
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.4);
+  transition: transform 0.4s ease;
+  width: 100%;
+  height: auto;
+}
+
+.column img:hover {
+  transform: scale(1.05);
+}
+
+/* ESTILOS PARA LA ALERTA DE PREVENCIÓN */
+.alerta-prevencion {
+    background: #2a0b0b; /* Fondo rojo oscuro/borgoña para peligro */
+    color: #fff;
+    text-align: center;
+    padding: 30px 5%;
+    font-size: 1.1rem;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4); /* Sombra roja de advertencia */
+    border-radius: 10px;
+    border: 1px solid #ff3333;
+}
+
+.alerta-prevencion h3 {
+    color: #ffcc00; /* Amarillo para el ícono de advertencia */
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.alerta-prevencion p {
+    margin-bottom: 15px;
+}
+
+.enlaces-ayuda {
+    margin-top: 20px;
+}
+
+/* Ajuste para botones pequeños dentro de la alerta */
+.small-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+/* Estilo específico para el botón secundario de acción */
+.secondary-action {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.secondary-action:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  background: #0b0b0f;
+  padding: 50px 10%;
+  color: #ddd;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.footer-grid h3 {
+  color: #66ccff;
+  margin-bottom: 10px;
+}
+
+.footer-grid a {
+  color: #b9ddff;
+  text-decoration: none;
+}
+
+.footer-grid a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ICONOS REDES */
+.redes-iconos a {
+  font-size: 1.8rem;
+  margin-right: 15px;
+  color: #66ccff;
+  transition: color 0.3s;
+}
+
+.redes-iconos a:hover {
+  color: #00c6ff;
+}
+
+/* BOTÓN SCROLL TOP */
+.scroll-to-top-btn {
+    background: #66ccff;
+    border: none;
+    color: #0e0e12;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; 
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s;
+    z-index: 999;
+}
+
+.scroll-to-top-btn:hover {
+  background: #00c6ff;
+  transform: scale(1.1);
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    /* Muestra el botón de hamburguesa */
+    .menu-toggle {
+        display: block; 
+    }
+
+    /* Oculta la navegación por defecto en móvil */
+    .nav ul {
+        flex-direction: column;
+        background: rgba(15, 15, 20, 0.95);
+        position: absolute;
+        top: 84px;
+        right: 0;
+        width: 250px;
+        display: none; 
+        padding: 15px;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Esta clase es la que activa el JavaScript: */
+    .nav ul.active {
+        display: flex; 
+    }
+    
+    .nav ul li {
+        margin: 10px 0;
+        text-align: right;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+    }
+    
+    /* Una columna para los grids en móviles */
+    .mitos-container, 
+    .recomendaciones-grid,
+    .row {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .column {
+        max-width: 100%;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Estilos para el aside de Direcciones */
+.direcciones {
+    /* Fondo y bordes para la caja del aside */
+    background-color: #16213e; /* Fondo oscuro similar al encabezado */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    margin-top: 30px;
+    max-width: 320px; /* Ancho típico de barra lateral */
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.direcciones h3 {
+    /* Estilo para el título "direcciones" */
+    font-size: 1.8rem;
+    color: #e94560; /* Color de acento rojo */
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0f3460;
+    padding-bottom: 10px;
+}
+
+.direcciones p {
+    /* Estilo general del texto */
+    font-size: 1rem;
+    color: #c0c0c0; /* Texto claro y legible */
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.direcciones b {
+    /* Texto en negrita, manteniendo el color de acento rojo */
+    color: #e94560;
+}
+
+.direcciones span {
+    /* El span ya tiene un estilo inline, pero aseguramos la visibilidad */
+    font-weight: bold;
+}
+
+/* Estilo específico para las direcciones listadas */
+.direcciones p:last-child {
+    white-space: pre-wrap; /* Permite saltos de línea dentro del párrafo para separar las direcciones */
+    border-top: 1px solid #0f3460;
+    padding-top: 15px;
+    font-size: 0.95rem;
+    color: #b9ddff; /* Color de acento más claro para las direcciones */
+    font-weight: 500;
+}
+
+/* Media Query para hacerlo responsivo */
+@media (max-width: 768px) {
+    .direcciones {
+        max-width: 90%; 
+        padding: 20px;
+    }
+}

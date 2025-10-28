@@ -1,0 +1,191 @@
+DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mitos y Realidades del Vapeo | InfoVape</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/vapies.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="header">
+      <div class="logo">
+        <img src="img.jpg/logo.jpeg" alt="Logo InfoVape">
+        <h1>InfoVape</h1>
+      </div>
+      
+      <nav class="nav">
+        <ul>
+          <li><a href="#inicio" class="nav-button">Inicio</a></li>
+          <li><a href="#quienes-somos" class="nav-button">Quiénes Somos</a></li>
+          <li><a href="#mitos" class="nav-button">Mitos y Realidades</a></li>
+          <li><a href="#recomendaciones" class="nav-button">Recomendaciones</a></li>
+          <li><a href="#contacto" class="nav-button">Contacto</a></li>
+        </ul>
+      </nav>
+      
+      <button class="menu-toggle" aria-label="Abrir menú" onclick="toggleMobileMenu()">
+        <i class="fa fa-bars"></i>
+      </button>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+        <div class="img-background">
+            <img src="img.jpg/background.jpeg" alt="Fondo de humo de vapeo" class="hero-image">
+        </div>
+
+        <div class="hero-content">
+            <h2>Vapear: Información sin humo</h2>
+            <p>Conoce los mitos y realidades sobre el vapeo, basados en evidencia científica y fuentes confiables.</p>
+
+            <div class="hero-buttons">
+                <a href="#mitos" class="btn">Despejar Mitos Ahora</a>
+                <a href="#quienes-somos" class="btn">Conócenos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="quienes-somos" class="quienes-somos">
+        <h2>Quiénes Somos</h2>
+        <div class="content">
+            <p>En <b>InfoVape</b>, somos un grupo de jóvenes investigadores comprometidos con brindar información clara, objetiva y actualizada sobre el vapeo. Nuestro propósito es desmontar los mitos más comunes y promover un diálogo responsable sobre sus efectos y riesgos. Buscamos empoderar a nuestros lectores con **hechos, no ficción**.</p>
+        </div>
+    </section>
+
+    <section id="mitos" class="mitos">
+        <h2>💨 Mitos y Realidades 💨</h2>
+        <p class="subtitle">La verdad detrás de las noticias más virales sobre los cigarrillos electrónicos.</p>
+        
+        <div class="mitos-container">
+            
+            <article class="card mito-card">
+                <div class="card-header">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>Mito 1: Es inofensivo porque no contiene tabaco.</h3>
+                </div>
+                <img src="img.jpg/mito 1.png" alt="Gráfico de peligro y cigarrillo electrónico" class="mito-img">
+                <div class="realidad">
+                    <p class="realidad-tag"><i class="fas fa-check-circle"></i> Realidad:</p>
+                    <p>Aunque el vapeo elimina la combustión, no es inocuo. El aerosol contiene partículas ultrafinas, saborizantes, y nicotina. Es menos dañino que fumar, pero presenta riesgos para la salud.</p>
+                </div>
+            </article>
+
+            <article class="card mito-card">
+                <div class="card-header">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>Mito 2: El vapeo es solo vapor de agua.</h3>
+                </div>
+                <img src="img.jpg/mito 2.png" alt="Gotas de agua y botellas de químico" class="mito-img">
+                <div class="realidad">
+                    <p class="realidad-tag"><i class="fas fa-check-circle"></i> Realidad:</p>
+                    <p>Es un aerosol, no vapor de agua puro. Está compuesto por una mezcla de Propilenglicol (PG), Glicerina Vegetal (VG), saborizantes químicos y, a menudo, nicotina.</p>
+                </div>
+            </article>
+
+            <article class="card mito-card">
+                <div class="card-header">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>Mito 3: Es una 'puerta de entrada' al tabaquismo.</h3>
+                </div>
+                <img src="img.jpg/mito 3.png" alt="Dos caminos: tabaco y vapeo" class="mito-img">
+                <div class="realidad">
+                    <p class="realidad-tag"><i class="fas fa-check-circle"></i> Realidad:</p>
+                    <p>Para fumadores adultos, el vapeo es una herramienta de **reducción de daños** efectiva para dejar el cigarrillo tradicional, aunque para no fumadores puede crear adicción.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+    
+    <section id="recomendaciones" class="recomendaciones">
+        <h2>✅ Recomendaciones Basadas en Evidencia</h2>
+        <div class="recomendaciones-grid">
+            <div class="rec-item">
+                <i class="fas fa-user-slash"></i>
+                <h3>Si no fumas, no empieces a vapear.</h3>
+                <p>Lo mejor para tu salud pulmonar es evitar la inhalación de cualquier sustancia ajena al aire.</p>
+            </div>
+            <div class="rec-item">
+                <i class="fas fa-smoking-ban"></i>
+                <h3>Para Fumadores: Reducción de Daños.</h3>
+                <p>Si eres fumador, cambiar al vapeo puede reducir significativamente tu exposición a carcinógenos.</p>
+            </div>
+            <div class="rec-item">
+                <i class="fas fa-flask"></i>
+                <h3>Busca el Origen y la Regulación.</h3>
+                <p>Utiliza solo líquidos de marcas reconocidas y reguladas que especifiquen sus ingredientes. Evita productos dudosos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="centros-ayuda-container">
+        <h3>Nuestros centros de ayuda</h3>
+        <div class="row">
+            <div class="column">
+                <img src="img.jpg/centro1.jpeg" alt="centro1">
+            </div>
+            <div class="column">
+                <img src="img.jpg/centro 2.jpeg" alt="centro2">
+            </div>
+            <div class="column">
+                <img src="img.jpg/centro 3.jpeg" alt="centro3">
+            </div>  
+        </div>
+
+        <aside class="Direcciones">
+            <h3>Direcciones</h3>
+            <p>Obten ayuda cerca de ti.</p>
+            <p>Circuito Médicos 52, 1er piso, CD. Satélite, Naucalpan de Juárez, Edo. Mex., CP 53100
+Allen Carr México, Av. Paseo de las Palmas 731-PB-103, Lomas de Chapultepec III Secc, Miguel Hidalgo, 11000 Ciudad de México, CDMX
+Calle Ote. 172 94bis, Moctezuma, Venustiano Carranza, 15530 Ciudad de México, CDMX</p>
+        </aside>
+    </section>
+
+  </main>
+
+  <footer id="contacto">
+    <div class="footer-grid">
+      <div class="contacto">
+        <h3>Contacto</h3>
+        <address>
+          <p>
+            <i class="fa fa-map-marker-alt"></i>
+            <a href="https://www.google.com/maps/place/Vape+Shop/" target="_blank" rel="noreferrer noopener">
+              <span style="color: #b9ddff; font-weight: bold">Ubicación: </span> Av. Insurgentes Sur 123, CDMX.
+            </a>
+          </p>
+          <p>
+            <i class="fa fa-phone"></i>
+            <span style="color: #b9ddff; font-weight: bold">Teléfono: </span> 
+            <a href="tel:+525512345678">55 1234 5678</a>
+          </p>
+        </address>
+      </div>
+      
+      <div class="redes-sociales">
+        <h3>Síguenos en redes sociales</h3>
+        <div class="redes-iconos">
+          <a href="https://www.facebook.com/vapeworldmx" aria-label="Síguenos en Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/vapeworldmx/" aria-label="Síguenos en Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@vapeworldmx" aria-label="Síguenos en TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <button onclick="scrollToTop()" class="scroll-to-top-btn" aria-label="Volver al inicio de la página">
+        <i class="fa fa-arrow-up"></i>
+      </button>
+      <p class="copyright">© 2025 InfoVape | Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="js/vape.js"></script>
+</body>
+</html>
